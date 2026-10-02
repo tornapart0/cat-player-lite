@@ -23,7 +23,7 @@
 | Prototype materials | Use existing perfboard wire headers solder and 1k resistor | 1 | $0.01 | $0.01 | Reuse home or school stock |
 | Enclosure materials | Use existing filament and four small screws | 1 | $0.01 | $0.01 | Reuse school makerspace stock |
 | **Parts subtotal** | — | — | — | **$26.29** | — |
-| **Tax & shipping** | — | — | — | **$0.00** | — |
-| **Total** | — | — | — | **$26.29** | — |
+| **Tax & shipping** | — | — | — | **$1.84** | — |
+| **Total** | — | — | — | **$28.13** | — |
 
-$3.71 left of the tier's funding.
+$1.87 left of the tier's funding.
