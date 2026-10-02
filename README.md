@@ -1,3 +1,4 @@
+<img width="1322" height="994" alt="Catmp3 diagram" src="https://github.com/user-attachments/assets/dcd20dd9-f8f1-4eba-8835-20dc9f7fbfef" />
 The pipeline is a simple movement from the esp32  that goes simply into the speaker/audio jackl for headphones, and then i will create the buttons and knobs to do on board audio control for the mp3 player, I also need to design the website for the controller to upload and change music. 
 Basically, 
 0) purchase parts
