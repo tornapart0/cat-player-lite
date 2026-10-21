@@ -1,20 +1,17 @@
 # Cat Player Lite: Music macro Pad
 
-A cat-shaped desktop MP3 player with a screen, two track buttons, and a rotary volume knob. This is the budget revision of my Music Macro Pad project(Cus iof price tier :()): the XIAO handles controls and display, while a DFPlayer Mini reads music from microSD and drives an external prototype speaker. The target is a USB-powered perfboard build in a printed enclosure, with the replacement speaker external.
+A cat-shaped desktop MP3 player with a screen, sum buttons, and a rotary volume knob. This is budget revision of my Music Macro Pad project(Cus of price tier :()): the XIAO handles controls and display, while a DFPlayer Mini reads music from microSD and drives an external prototype speaker, I want to eventually store a smol local model on the SD card, and use a pi or something to run the mode. The target is a USB-powered perfboard build in a printed enclosure, with the replacement speaker external.
 
 ## Features and controls
 
 - Previous and next buttons select tracks.
-- Turning the encoder changes volume from 0 to 30; pressing it toggles play/pause.
-- A 128 × 64 SSD1306 OLED shows the track number, volume, playback state, and last action. It does not read song-title metadata.
-- An MCP23017 provides five control inputs over I2C; the firmware enables input pull-ups.
+- Turning the encoder changes volume from 0 to 30: pressing it toggles play/pause.(Like headphones)
+- A 128 × 64 SSD1306 OLED shows the track number, volume, playback state, and last action. It does not read song-title metadata:(
+- An MCP23017 provides five control inputs over I2C: the firmware enables input pull-ups.
 - The DFPlayer handles MP3 decoding and speaker output. The firmware attempts to advance when a track finishes.
 
 ## Electronics
 
-![Electronics wiring plan](docs/images/electronics-wiring.png)
-
-This is a wiring plan, not a manufactured PCB or an assembled-board photograph. Follow [WIRING.md](WIRING.md) for all connections and staged assembly. XIAO D4/GPIO6 and D5/GPIO7 carry I2C to the OLED at `0x3C` and MCP23017 at `0x20`. XIAO D2/GPIO4 sends UART commands through 1 kΩ to DFPlayer RX; D3/GPIO5 receives DFPlayer TX. DFPlayer uses USB-derived 5 V; the OLED and expander use 3.3 V. Share ground.
 
 The speaker connects **between SPK1 and SPK2**. Neither lead goes to ground; do not attach headphones to these outputs. Start at low volume. Bench-check power rails and module pin labels before soldering.
 
@@ -33,9 +30,7 @@ The body is 116 mm wide, with an 84 mm elliptical head and ears reaching y = 64 
 - [STEP generator](enclosure/export_step.py) and [geometry validation](enclosure/step-validation.json).
 - [Dimensioned SVG blueprint](enclosure/cat_player_lite_blueprint.svg).
 
-The original Shapr3D file was lost; these files derive from the repository's existing OpenSCAD reconstruction. The STEP outline retains its 64-segment profile, with analytic round bores. A 0.5 mm shoulder now connects the rear inset ring to the wall; without it the original ring floated across a 0.35 mm gap. Both sources include that support. The assembly STEP separates the shells by 5 mm for inspection.
 
-These are enclosure shells, not a mechanically validated assembly. Module mounts, OLED active-area fit, button actuators, screw choice, and cable clearance still need measurement. Print the fit-check coupon first; the large face apertures need suitable button caps or an actuator solution for the small tactile switches. Do not assume the current cutouts prove the purchased modules will fit.
 
 ## Firmware setup
 
@@ -68,4 +63,4 @@ Use [BOM.csv](BOM.csv) for the current itemized budget and [BOM.md](BOM.md) for 
 
 ## Status and next checks
 
-The firmware, wiring plan, OpenSCAD source, STEP shells, and blueprint are available. I checked the STEP files for valid solids and reimported them to compare volume with the exported shapes; this does not prove printability or physical fit. This documentation update does not claim a new firmware compile or a working final hardware build. Remaining work includes confirming supplies and checkout costs, measuring actual modules, adding their internal mounts, printing a fit coupon, assembling the intended DFPlayer circuit, and testing playback, controls, and enclosure access. Historical work and screenshots are in [JOURNAL.md](JOURNAL.md).
+The firmware, wiring plan, OpenSCAD source, STEP shells, and blueprint are available. I checked the STEP files for valid solids and reimported them to compare volume with the exported shapes.Thiss does not yet prove printability or physical fit, but hjopefully it works fingers crossed. This documentation update does not claim a new firmware compile or a working final hardware build. Remaining work includes confirming supplies and checkout costs, measuring actual modules, adding their internal mounts, printing a fit coupon, assembling the intended DFPlayer circuit, and testing playback, controls, and enclosure access. Historical work and screenshots are in [JOURNAL.md](JOURNAL.md).
