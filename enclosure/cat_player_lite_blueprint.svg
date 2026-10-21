@@ -16,7 +16,7 @@
 
   <rect width="1200" height="800" fill="#fbfcfe"/>
   <text x="55" y="55" class="title">Cat Player Lite — under-$30 revision</text>
-  <text x="55" y="86" class="label">116 mm wide · about 108 mm tall · 24 mm deep · USB powered</text>
+  <text x="55" y="86" class="label">116 mm wide · about 106 mm tall · 24 mm deep · USB powered</text>
 
   <g transform="translate(360 410)">
     <path class="outline" d="M 0 210 C -190 210 -290 150 -290 20 C -290 -85 -235 -155 -165 -175 L -250 -110 L -210 -320 L -90 -165 C -55 -185 55 -185 90 -165 L 210 -320 L 250 -110 L 165 -175 C 235 -155 290 -85 290 20 C 290 150 190 210 0 210 Z"/>
@@ -43,7 +43,7 @@
 
   <g transform="translate(790 155)">
     <rect x="0" y="0" width="340" height="260" rx="18" class="keep"/>
-    <text x="22" y="38" class="label" style="font-weight:700">Kept in the $25.64 build</text>
+    <text x="22" y="38" class="label" style="font-weight:700">Current USB-powered build</text>
     <text x="28" y="75" class="label">• cat-shaped printed case</text>
     <text x="28" y="108" class="label">• OLED track/volume display</text>
     <text x="28" y="141" class="label">• previous and next buttons</text>

@@ -85,6 +85,13 @@ module back_shell() {
             }
             for (p = screw_points)
                 translate([p[0], p[1], wall]) cylinder(d = 8, h = back_depth - wall - 1);
+            // Shoulder joins the inset ring to the wall across its 0.35 mm gap.
+            translate([0, 0, back_depth - 1.9])
+                linear_extrude(0.5)
+                    difference() {
+                        offset(delta = -wall) cat_outline_2d();
+                        offset(delta = -wall - fit_gap - 1.3) cat_outline_2d();
+                    }
             translate([0, 0, back_depth - 1.9])
                 linear_extrude(1.7)
                     difference() {

@@ -1,0 +1,35 @@
+{
+  "front": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 23482.452,
+    "bounds_mm": [
+      116.0,
+      106.0,
+      8.0
+    ],
+    "round_trip_volume_error_mm3": 1.7571437638252974e-09
+  },
+  "back": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 33989.543,
+    "bounds_mm": [
+      116.0,
+      106.0,
+      16.0
+    ],
+    "round_trip_volume_error_mm3": 1.0040821507573128e-09
+  },
+  "assembly": {
+    "valid": true,
+    "solids": 2,
+    "volume_mm3": 57471.995,
+    "bounds_mm": [
+      116.0,
+      106.0,
+      29.0
+    ],
+    "round_trip_volume_error_mm3": 3.055902197957039e-09
+  }
+}
