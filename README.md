@@ -1,6 +1,6 @@
-# Cat Player Lite — Music macro Pad
+# Cat Player Lite: Music macro Pad
 
-A cat-shaped desktop MP3 player with a screen, two track buttons, and a rotary volume knob. This is the budget revision of my Music macro Pad project: the XIAO handles controls and display, while a DFPlayer Mini reads music from microSD and drives an external prototype speaker. The target is a USB-powered perfboard build in a printed enclosure, with the replacement speaker external for initial testing.
+A cat-shaped desktop MP3 player with a screen, two track buttons, and a rotary volume knob. This is the budget revision of my Music Macro Pad project(Cus iof price tier :()): the XIAO handles controls and display, while a DFPlayer Mini reads music from microSD and drives an external prototype speaker. The target is a USB-powered perfboard build in a printed enclosure, with the replacement speaker external.
 
 ## Features and controls
 
@@ -9,8 +9,6 @@ A cat-shaped desktop MP3 player with a screen, two track buttons, and a rotary v
 - A 128 × 64 SSD1306 OLED shows the track number, volume, playback state, and last action. It does not read song-title metadata.
 - An MCP23017 provides five control inputs over I2C; the firmware enables input pull-ups.
 - The DFPlayer handles MP3 decoding and speaker output. The firmware attempts to advance when a track finishes.
-
-The supplied revision has no Bluetooth audio receiver, headphone output, microphone, website uploader, battery, or AI assistant. Those appeared in earlier ideas or prototype experiments, but are not implemented in this firmware. The October 4 journal describes a borrowed-parts Bluetooth experiment; it is not validation of this XIAO ESP32-C3 / DFPlayer configuration.
 
 ## Electronics
 
@@ -26,7 +24,7 @@ The speaker connects **between SPK1 and SPK2**. Neither lead goes to ground; do 
 
 ![Preview of exported STEP enclosure geometry](enclosure/cat_player_lite_step_preview.png)
 
-The body is 116 mm wide, with an 84 mm elliptical head and ears reaching y = 64 mm. Wall thickness is 2.2 mm; front and rear depths are 8 mm and 16 mm. Openings include the 23 × 13 mm OLED window, two 10.5 mm button apertures, a 7.4 mm encoder shaft hole, speaker grille, USB access, and microSD access. Four screw positions join the shells.
+The body is 116 mm wide, with an 84 mm elliptical head and ears reaching y = 64 mm. Wall thickness is 2.2 mm; front and rear depths are 8 mm and 16 mm. Openings include the 23 × 13 mm OLED window, two 10.5 mm button apertures, a 7.4 mm encoder shaft hole, speaker grille, USB access, and microSD access. Four screw positions join the shells, (took frile from earlier journal on Shapr 3D and edited for finaln project).
 
 - [OpenSCAD source](enclosure/cat_player_lite_enclosure.scad) — select `front`, `back`, `fit_check`, or `assembly`.
 - [Front shell STEP](enclosure/cat_player_lite_front.step)
@@ -63,14 +61,11 @@ Format a microSD card FAT32 and put tracks in `/mp3/0001.mp3`, `/mp3/0002.mp3`, 
 | Delivery, tax and tariff allowance | | | **$24.00** | Estimated; final checkout pending |
 | Budget total | | | **$62.86** | Tier 2: $65; $2.14 unallocated |
 
-The live Half Life project uses **Tier 2 ($65)**, supported by the existing 13 logged design hours. Prices were checked against the selected vendor carts on October 20, 2026. The revised DFRobot cart contains DFR0299 ($5.90), DFR0486 ($14.90), and FIT0502 ($3.50): $24.30 of merchandise. Seeed's selected XIAO ESP32-C3 is $4.99; Adafruit's MCP23017 is $5.95; DigiKey's encoder and two buttons are $3.59. The remaining $0.03 consists of three platform placeholders for reused supplies, not actual one-cent offers. Reused stock must be confirmed before the build.
 
-The $24 delivery/tax/tariff amount is a **budget allowance, not a delivered checkout quote**. DigiKey currently estimates $4.99 USPS Ground Advantage shipping plus $1.07 tariff; $17.94 remains within that allowance for the other three shipments and applicable taxes. Final destination-dependent charges must be verified before ordering. If they exceed the allowance plus the $2.14 unallocated balance, revise sourcing before purchasing. No order has been placed.
 
-The unavailable AliExpress OLED and Adafruit #4227 speaker have been replaced with [DFRobot DFR0486](https://www.dfrobot.com/product-1576.html) and [DFRobot FIT0502](https://www.dfrobot.com/product-1506.html). The OLED is a 3.3–5V SSD1306 I2C display; use 3.3V here, wire the included cable by its VCC/GND/SCL/SDA labels, and verify its address against the firmware. Its PCB is 41.2 × 26.2 mm and active area is 21.744 × 10.864 mm. The new 70 × 30 × 16 mm speaker remains **external during prototype testing**; the current case has no verified mount for it. Connect one speaker across SPK1/SPK2; the vendor's “stereo” product name does not make the DFPlayer speaker output stereo. Module mounting and cable routing remain to be measured.
 
 Use [BOM.csv](BOM.csv) for the current itemized budget and [BOM.md](BOM.md) for the readable copy. The historical under-$30 target has been replaced by this Tier 2 budget.
 
 ## Status and next checks
 
-The firmware, wiring plan, OpenSCAD source, STEP shells, and blueprint are available. STEP files are checked for valid solids and reimported to compare volume with the exported shapes; this does not prove printability or physical fit. This documentation update does not claim a new firmware compile or a working final hardware build. Remaining work includes confirming supplies and checkout costs, measuring actual modules, adding their internal mounts, printing a fit coupon, assembling the intended DFPlayer circuit, and testing playback, controls, and enclosure access. Historical work and screenshots are in [JOURNAL.md](JOURNAL.md).
+The firmware, wiring plan, OpenSCAD source, STEP shells, and blueprint are available. I checked the STEP files for valid solids and reimported them to compare volume with the exported shapes; this does not prove printability or physical fit. This documentation update does not claim a new firmware compile or a working final hardware build. Remaining work includes confirming supplies and checkout costs, measuring actual modules, adding their internal mounts, printing a fit coupon, assembling the intended DFPlayer circuit, and testing playback, controls, and enclosure access. Historical work and screenshots are in [JOURNAL.md](JOURNAL.md).
