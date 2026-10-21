@@ -1,6 +1,6 @@
 # Cat Player Lite — Music macro Pad
 
-A cat-shaped desktop MP3 player with a screen, two track buttons, and a rotary volume knob. This is the budget revision of my Music macro Pad project: the XIAO handles controls and display, while a DFPlayer Mini reads music from microSD and drives a speaker. The target is a USB-powered perfboard build in a printed enclosure.
+A cat-shaped desktop MP3 player with a screen, two track buttons, and a rotary volume knob. This is the budget revision of my Music macro Pad project: the XIAO handles controls and display, while a DFPlayer Mini reads music from microSD and drives an external prototype speaker. The target is a USB-powered perfboard build in a printed enclosure, with the replacement speaker external for initial testing.
 
 ## Features and controls
 
@@ -51,19 +51,25 @@ Format a microSD card FAT32 and put tracks in `/mp3/0001.mp3`, `/mp3/0002.mp3`, 
 | --- | ---: | ---: | ---: | --- |
 | Microcontroller — Official XIAO ESP32-C3 price checked 2026-10-01 | 1 | $4.99 | $4.99 | [Seeed Studio](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) |
 | MP3 module — DFPlayer Mini DFR0299 | 1 | $5.90 | $5.90 | [DFRobot](https://www.dfrobot.com/product-1121.html) |
-| OLED — Choose a four-pin 0.96 inch 128x64 I2C SSD1306 module | 1 | $3.88 | $3.88 | [AliExpress marketplace](https://www.aliexpress.us/item/1005008516112334.html) |
+| OLED — DFR0486 SSD1306 128x64; includes PH2.0 cable; 41.2x26.2mm PCB; verify I2C address and mounting | 1 | $14.90 | $14.90 | [DFRobot](https://www.dfrobot.com/product-1576.html) |
 | I/O expander — MCP23017 I2C breakout | 1 | $5.95 | $5.95 | [Adafruit](https://www.adafruit.com/product/5346) |
-| Speaker — 8 ohm 1 watt mini oval speaker | 1 | $1.95 | $1.95 | [Adafruit](https://www.adafruit.com/product/4227) |
+| Speaker — FIT0502 passive 8-ohm 3W; 70x30x16mm; one external mono speaker for prototype; enclosure mount needs revision | 1 | $3.50 | $3.50 | [DFRobot](https://www.dfrobot.com/product-1506.html) |
 | Rotary encoder — Bourns encoder with push switch | 1 | $2.89 | $2.89 | [DigiKey](https://www.digikey.com/en/products/detail/bourns-inc/PEC11R-4315K-S0012/4699233) |
 | Momentary buttons — Omron B3F-1000 normally-open tactile switches | 2 | $0.35 | $0.70 | [DigiKey](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3F-1000/33150) |
 | microSD card — Use an existing FAT32 card preferably 32 GB or smaller | 1 | $0.01 | $0.01 | Reuse existing card |
 | Prototype materials — Use existing perfboard wire headers solder and 1k resistor | 1 | $0.01 | $0.01 | Reuse home or school stock |
 | Enclosure materials — Use existing filament and four small screws | 1 | $0.01 | $0.01 | Reuse school makerspace stock |
-| Parts subtotal | | | **$26.29** | |
-| Tax and shipping allowance | | | **$1.84** | Original estimate |
-| Total | | | **$28.13** | $1.87 below $30 |
+| Parts subtotal | | | **$38.86** | |
+| Delivery, tax and tariff allowance | | | **$24.00** | Estimated; final checkout pending |
+| Budget total | | | **$62.86** | Tier 2: $65; $2.14 unallocated |
 
-These are the original project estimates, not fresh checkout quotes. The three $0.01 entries are platform placeholders for reused materials, not offers to buy those items for one cent; availability must be checked with the home/school stock owner. Delivery, tax, marketplace variants, and prices may differ. Use [BOM_UNDER_30.csv](BOM_UNDER_30.csv) for the itemized source and [BOM.md](BOM.md) for the Half Life mirror. Buy the four-pin I2C OLED variant, and check module dimensions against the case before purchasing.
+The live Half Life project uses **Tier 2 ($65)**, supported by the existing 13 logged design hours. Prices were checked against the selected vendor carts on October 20, 2026. The revised DFRobot cart contains DFR0299 ($5.90), DFR0486 ($14.90), and FIT0502 ($3.50): $24.30 of merchandise. Seeed's selected XIAO ESP32-C3 is $4.99; Adafruit's MCP23017 is $5.95; DigiKey's encoder and two buttons are $3.59. The remaining $0.03 consists of three platform placeholders for reused supplies, not actual one-cent offers. Reused stock must be confirmed before the build.
+
+The $24 delivery/tax/tariff amount is a **budget allowance, not a delivered checkout quote**. DigiKey currently estimates $4.99 USPS Ground Advantage shipping plus $1.07 tariff; $17.94 remains within that allowance for the other three shipments and applicable taxes. Final destination-dependent charges must be verified before ordering. If they exceed the allowance plus the $2.14 unallocated balance, revise sourcing before purchasing. No order has been placed.
+
+The unavailable AliExpress OLED and Adafruit #4227 speaker have been replaced with [DFRobot DFR0486](https://www.dfrobot.com/product-1576.html) and [DFRobot FIT0502](https://www.dfrobot.com/product-1506.html). The OLED is a 3.3–5V SSD1306 I2C display; use 3.3V here, wire the included cable by its VCC/GND/SCL/SDA labels, and verify its address against the firmware. Its PCB is 41.2 × 26.2 mm and active area is 21.744 × 10.864 mm. The new 70 × 30 × 16 mm speaker remains **external during prototype testing**; the current case has no verified mount for it. Connect one speaker across SPK1/SPK2; the vendor's “stereo” product name does not make the DFPlayer speaker output stereo. Module mounting and cable routing remain to be measured.
+
+Use [BOM.csv](BOM.csv) for the current itemized budget and [BOM.md](BOM.md) for the readable copy. The historical under-$30 target has been replaced by this Tier 2 budget.
 
 ## Status and next checks
 

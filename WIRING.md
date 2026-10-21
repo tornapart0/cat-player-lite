@@ -57,3 +57,9 @@ Do not connect headphones to `SPK1`/`SPK2`. Headphones were removed from the bud
 6. Print the enclosure fit-check section before the full case.
 
 Stay on USB power for this revision. A battery and charger consume most of the remaining contingency and introduce a more serious safety requirement.
+
+## October 20 sourcing revision
+
+Display: DFRobot DFR0486 SSD1306 128x64 I2C module, powered at 3.3V. Included Gravity cable pins are VCC, GND, SCL, SDA; map labels, not wire colour. Verify the actual I2C address before using the sketch's 0x3C setting.
+
+Speaker: one DFRobot FIT0502 8-ohm 3W passive speaker across SPK1/SPK2. Keep it external for the prototype: its 70x30x16mm package is larger than the original mini oval speaker, and the enclosure mount is not yet revised or verified.

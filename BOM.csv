@@ -1,11 +1,12 @@
 Qty,Part,What it's for,Unit Price USD,Vendor,Link,Required,Notes
 1,Microcontroller,Runs the controls display and player commands,4.99,Seeed Studio,https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html,Yes,Official XIAO ESP32-C3 price checked 2026-10-01
 1,MP3 module,Reads the microSD card decodes MP3 files and drives the speaker,5.90,DFRobot,https://www.dfrobot.com/product-1121.html,Yes,DFPlayer Mini DFR0299
-1,OLED,Shows track title volume and playback status,3.88,AliExpress marketplace,https://www.aliexpress.us/item/1005008516112334.html,Yes,Choose a four-pin 0.96 inch 128x64 I2C SSD1306 module
+1,OLED,Shows track title volume and playback status,14.90,DFRobot,https://www.dfrobot.com/product-1576.html,Yes,DFR0486 SSD1306 128x64; includes PH2.0 cable; 41.2x26.2mm PCB; verify I2C address and mounting
 1,I/O expander,Provides enough clean inputs for the knob and buttons,5.95,Adafruit,https://www.adafruit.com/product/5346,Yes,MCP23017 I2C breakout
-1,Speaker,Plays the DFPlayer audio output,1.95,Adafruit,https://www.adafruit.com/product/4227,Yes,8 ohm 1 watt mini oval speaker
+1,Speaker,Plays the DFPlayer audio output,3.50,DFRobot,https://www.dfrobot.com/product-1506.html,Yes,FIT0502 passive 8-ohm 3W; 70x30x16mm; one external mono speaker for prototype; enclosure mount needs revision
 1,Rotary encoder,Controls volume and play or pause,2.89,DigiKey,https://www.digikey.com/en/products/detail/bourns-inc/PEC11R-4315K-S0012/4699233,Yes,Bourns encoder with push switch
 2,Momentary buttons,Previous and next track controls,0.35,DigiKey,https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3F-1000/33150,Yes,Omron B3F-1000 normally-open tactile switches
 1,microSD card,Stores the MP3 music files,0.01,Reuse existing card,,Yes,Use an existing FAT32 card preferably 32 GB or smaller
 1,Prototype materials,Connects and supports the electronic parts,0.01,Reuse home or school stock,,Yes,Use existing perfboard wire headers solder and 1k resistor
 1,Enclosure materials,Prints and fastens the original cat-shaped case,0.01,Reuse school makerspace stock,,Yes,Use existing filament and four small screws
+1,Delivery tax and tariff allowance,Four vendor orders,24.00,Multiple vendors,,Yes,Allowance not checkout quote: includes DigiKey estimate of 4.99 shipping + 1.07 tariff; other delivery and tax still pending checkout
